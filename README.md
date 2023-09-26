@@ -6,4 +6,4 @@
 ### Chingsan Ly
 ### Santiago Zavala
 ### Harshita Mhaska
-#### James Thyen
+### James Thyen
