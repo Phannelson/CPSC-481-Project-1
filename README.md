@@ -5,5 +5,5 @@
 ### Aaron Lee
 ### Chingsan Ly
 ### Santiago Zavala
-### Harshita Mhaska
+### Harshita Mhaske
 ### James Thyen
