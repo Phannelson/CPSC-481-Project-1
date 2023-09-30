@@ -36,6 +36,7 @@ def actions(state, available_courses):
             and course.name not in state.courses_taken[state.semester]
         ):
             action.append(course)
+            available_courses.remove(course)
 
     return action
 
@@ -102,7 +103,7 @@ initial_state = State(0, {1: []}, 0, 1)
 
 choice = input(
     "Choose an option:\n"
-    "1: Freshman\n"
+    "1: Fresh2man\n"
     "2: Halfway\n"
     "3: Enter courses (separate by comma)\n"
     "Enter number: ")
@@ -112,7 +113,7 @@ if choice == '1':
 elif choice == '2':
     #state(completed_units, {1: semesters}, amount of classes, semester)
     #add more later
-    initial_state = State(20, {1: ["CPSC 120", "MATH 170A"],2: ["CPSC 253", "MATH 150A"],3: ["CPSC 121", "MATH 150B"]}, 6, 4)
+    initial_state = State(20, {1: ["CPSC 120", "MATH 170A"],2: ["CPSC 253", "MATH 150A"],3: ["CPSC 121", "MATH 150B"]}, 0, 4)
 elif choice == '3':
     #list classes but we'll see how that works
     #hard code with nelson's schedule
