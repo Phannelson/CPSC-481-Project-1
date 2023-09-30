@@ -1,31 +1,31 @@
 courses = {
     #lower division core (18 units)
-    "CPSC 120" : { "units" : 3, "prereq" : [] },                                            #intro to programming
-    "CPSC 121" : { "units" : 3, "prereq" : ["CPSC 120"] },                                  #Object oriented programming
-    "CPSC 131" : { "units" : 3, "prereq" : ["CPSC 121"] },                                  #Data Structure
-    "CPSC 223" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #C/Java/C#/Python/Swift programming
-    "CPSC 240" : { "units" : 3, "prereq" : ["CPSC 131", "MATH 170A"] },                     #Computer organization and Assembly
-    "CPSC 253" : { "units" : 3, "prereq" : [] },                                            #Cybersecurity foundations and principles
+    #"CPSC 120" : { "units" : 3, "prereq" : [] },                                            #intro to programming
+    #"CPSC 121" : { "units" : 3, "prereq" : ["CPSC 120"] },                                  #Object oriented programming
+    #"CPSC 131" : { "units" : 3, "prereq" : ["CPSC 121"] },                                  #Data Structure
+    #"CPSC 223" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #C/Java/C#/Python/Swift programming
+    #"CPSC 240" : { "units" : 3, "prereq" : ["CPSC 131", "MATH 170A"] },                     #Computer organization and Assembly
+    #"CPSC 253" : { "units" : 3, "prereq" : [] },                                            #Cybersecurity foundations and principles
     #upper division core (30 units)
-    "CPSC 315" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Professional Ethics in Computing
-    "CPSC 323" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Compilers and Languages
-    "CPSC 332" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #File Structures & Dataabases
-    "CPSC 335" : { "units" : 3, "prereq" : ["CPSC 131", "MATH 170A", "MATH 150A"] },        #Algorithm Engineering
-    "CPSC 351" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Operating System Concepts
-    "CPSC 362" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Foundations of Software Engineering
-    "CPSC 471" : { "units" : 3, "prereq" : ["CPSC 351"] },                                  #Computer Communications
-    "CPSC 481" : { "units" : 3, "prereq" : ["CPSC 335", "MATH 338"] },                      #Artificial Intelligence
-    "CPSC 490" : { "units" : 3, "prereq" : ["CPSC 362"] },                                  #Undergraduate Seminar in CS
-    "CPSC 491" : { "units" : 3, "prereq" : ["CPSC 490"] },                                  #Senior Capstone Project in CS
+    #"CPSC 315" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Professional Ethics in Computing
+    #"CPSC 323" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Compilers and Languages
+    #"CPSC 332" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #File Structures & Dataabases
+    #"CPSC 335" : { "units" : 3, "prereq" : ["CPSC 131", "MATH 170A", "MATH 150A"] },        #Algorithm Engineering
+    #"CPSC 351" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Operating System Concepts
+    #"CPSC 362" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Foundations of Software Engineering
+    #"CPSC 471" : { "units" : 3, "prereq" : ["CPSC 351"] },                                  #Computer Communications
+    #"CPSC 481" : { "units" : 3, "prereq" : ["CPSC 335", "MATH 338"] },                      #Artificial Intelligence
+    #"CPSC 490" : { "units" : 3, "prereq" : ["CPSC 362"] },                                  #Undergraduate Seminar in CS
+    #"CPSC 491" : { "units" : 3, "prereq" : ["CPSC 490"] },                                  #Senior Capstone Project in CS
     #Math Requirements (18 units)
-    "MATH 150A" : { "units" : 4, "prereq" : [] },                                           #Calculus 1
-    "MATH 150B" : { "units" : 4, "prereq" : ["MATH 150A"] },                                #Calculus 2
-    "MATH 170A" : { "units" : 3, "prereq" : [] },                                           #Math Structures 1
-    "MATH 170B" : { "units" : 3, "prereq" : ["MATH 170A"] },                                #Math Structures 2
-    "MATH 338" : { "units" : 4, "prereq" : ["MATH 150B"] },                                 #Statistics Applied to Natural Sciences
+    #"MATH 150A" : { "units" : 4, "prereq" : [] },                                           #Calculus 1
+    #"MATH 150B" : { "units" : 4, "prereq" : ["MATH 150A"] },                                #Calculus 2
+    #"MATH 170A" : { "units" : 3, "prereq" : [] },                                           #Math Structures 1
+    #"MATH 170B" : { "units" : 3, "prereq" : ["MATH 170A"] },                                #Math Structures 2
+    #"MATH 338" : { "units" : 4, "prereq" : ["MATH 150B"] },                                 #Statistics Applied to Natural Sciences
     #CS Electives (15 units)
-    "CPSC 254" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Software Development With Open Source Systems
-    "CPSC 349" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Web Front-end Engineering
+    #"CPSC 254" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Software Development With Open Source Systems
+    #"CPSC 349" : { "units" : 3, "prereq" : ["CPSC 131"] },                                  #Web Front-end Engineering
     "CPSC 352/452" : { "units" : 3, "prereq" : ["MATH 170B, CPSC 131", "CPSC 253"] },       #Cryptography
     "CPSC 375" : { "units" : 3, "prereq" : ["CPSC 131", "MATH 338"] },                      #Intro to Data Science and Big Data
     "CPSC 386" : { "units" : 3, "prereq" : ["CPSC 121"] },                                  #Intro to Game Design and Production
@@ -59,4 +59,34 @@ courses = {
     #or  = they can take either or prereqs
     #can be repeated = special case where the class can be repeated up to 3 times for 9 credits
 }
+Course = 0
+available_courses = [
+    Course("CPSC 120", 3, [], 0),
+    Course("CPSC 253", 3, [], 0),
+    Course("MATH 170A", 3, [], 0),
+    Course("MATH 150A", 4, [], 0),
+    Course("CPSC 121", 3, ["CPSC 120"], 1),
+    Course("MATH 150B", 4, ["MATH 150A"], 1),
+    Course("MATH 170B", 3, ["MATH 170A"], 1),
+    Course("CPSC 131", 3, ["CPSC 121"], 1),
+    Course("CPSC 240", 4, ["CPSC 131"], 1),
+    Course("CPSC 362", 3, ["CPSC 131"], 1),
+    Course("CPSC 332", 3, ["CPSC 120"], 1),
+    Course("CPSC 223", 3, ["CPSC 131"], 1),
+    Course("CPSC 223", 3, ["CPSC 131"], 1),
+    Course("CPSC 315", 3, ["CPSC 131"], 1),
+    Course("CPSC 323", 3, ["CPSC 131"], 1),
+    Course("CPSC 335", 3, ["CPSC 131", "MATH 170A", "MATH 150A"], 1),
+    Course("CPSC 351", 3, ["CPSC 131"], 1),
+    Course("CPSC 471", 3, ["CPSC 351"], 1),
+    Course("CPSC 481", 3, ["CPSC 335", "MATH 338"], 1),
+    Course("CPSC 490", 3, ["CPSC 362"], 1),
+    Course("CPSC 491", 3, ["CPSC 490"], 1),
+    Course("MATH 338", 4, ["MATH 150B"], 1),
+    Course("CPSC 254", 3, ["CPSC 131"], 1),
+    Course("CPSC 349", 3, ["CPSC 131"], 1),
 
+
+
+
+]

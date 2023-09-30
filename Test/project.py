@@ -106,6 +106,7 @@ def astar_search(initial_state, available_courses):
     open_list.append((0, initial_state)) 
     visited = set() 
 
+    
     while open_list:
         open_list.sort(key=lambda x: x[0]) 
         priority, current_state = open_list.pop(0)

@@ -21,21 +21,25 @@ def sem_builder(current_state, max_units_per_semester):
     selected_courses = []
 
     for course in available_courses:
-        if all(prereq in current_state.courses_taken for prereq in course.prerequisites):
+        if all(prereq in current_state.courses_taken for prereq in course.prerequisites
+               and course.name not in current_state.courses_taken):
             selected_courses.append(course)
 
-    return new_state
+    return current_state, selected_courses
 
-def sem_evaluator(state):
+def sem_evaluator(state, selected_courses):
      max_units_per_semester = 9
+     current_units = 0
      sem_evaluator = []
 
-     for course in available_courses:
+     for course in selected_courses:
         if (
             state.completed_units + course.units <= 120
             and all(prereq in state.courses_taken for prereq in course.prereq)
+            and current_units < max_units_per_semester
         ):
             sem_evaluator.append(course)
+            current_units += course.units
 
      return sem_evaluator
 
@@ -78,13 +82,15 @@ def astar_search(initial_state, max_units_per_semester):
     return State(0, [], -1) 
 
 available_courses = {
-    "math_requirements": [Course("MATH 170A", 3, [], 0),
+    "math_requirements": 
+    [Course("MATH 170A", 3, [], 0),
     Course("MATH 170B", 3, ["MATH 170A"], 1),
     Course("MATH 150A", 4, [], 0),
     Course("MATH 150B", 4, ["MATH 150A"], 1),
     Course("MATH 338", 4, ["MATH 150B"], 1),],
 
-    "upper_division_courses": [Course("CPSC 253", 3, [], 0),
+    "upper_division_courses": 
+    [Course("CPSC 253", 3, [], 0),
     Course("CPSC GE", 3, [], 0),
     Course("CPSC GE", 3, [], 0),
     Course("CPSC GE", 3, [], 0),
