@@ -15,7 +15,7 @@ class State:
         return self.completed_units < other.completed_units
 
 def is_goal_state(state):
-    return state.completed_units == 81
+    return state.completed_units == 120
 
 def actions(state, available_courses):
     max_units_per_semester = 9
@@ -23,7 +23,7 @@ def actions(state, available_courses):
 
     for course in available_courses:
         if (
-            state.completed_units + course.units <= 81
+            state.completed_units + course.units <= 120
             and all(prereq in state.courses_taken for prereq in course.prereq)
         ):
             actions.append(course)
@@ -43,31 +43,59 @@ def apply_action(state, action):
 
 available_courses = [
     Course("CPSC 120", 3, [], 0),
-    Course("CPSC 253", 3, [], 0),
-    Course("MATH 170A", 3, [], 0),
-    Course("MATH 150A", 4, [], 0),
     Course("CPSC 121", 3, ["CPSC 120"], 1),
-    Course("MATH 150B", 4, ["MATH 150A"], 1),
+    Course("MATH 170A", 3, [], 0),
     Course("MATH 170B", 3, ["MATH 170A"], 1),
+    Course("MATH 150A", 4, [], 0),
+    Course("MATH 150B", 4, ["MATH 150A"], 1),
+    Course("CPSC 253", 3, [], 0),
+    Course("CPSC GE", 3, [], 0),
+    Course("CPSC GE", 3, [], 0),
+    Course("CPSC GE", 3, [], 0),
+    Course("CPSC GE", 3, [], 0),
+    Course("CPSC GE", 3, [], 0),
     Course("CPSC 131", 3, ["CPSC 121"], 1),
+    Course("CPSC 223", 3, ["CPSC 131"], 1),
     Course("CPSC 240", 4, ["CPSC 131"], 1),
-    Course("CPSC 362", 3, ["CPSC 131"], 1),
-    Course("CPSC 332", 3, ["CPSC 120"], 1),
-    Course("MATH 338", 4, ["MATH 150B"], 1),
-    Course("MATH 323", 3, ["CPSC 131"], 1),
-    Course("CPSC 335", 3, ["CPSC 131"], 1),
-    Course("MATH 351", 4, ["CPSC 131"], 1),
     Course("CPSC 315", 3, ["CPSC 131"], 1),
+    Course("CPSC 323", 3, ["CPSC 131"], 1),
+    Course("CPSC 332", 3, ["CPSC 131"], 1),
+    Course("CPSC 335", 3, ["CPSC 131"], 1),
+    Course("MATH 338", 4, ["MATH 150B"], 1),
+    Course("CPSC 351", 4, ["CPSC 131"], 1),
+    Course("CPSC 362", 3, ["CPSC 131"], 1),
+    Course("CPSC 471", 3, ["CPSC 351"], 1),
+    Course("CPSC 481", 3, ["CPSC 335"], 1),
     Course("CPSC 490", 3, ["CPSC 362"], 1),
     Course("CPSC 491", 4, ["CPSC 490"], 1),
-    Course("CPSC 481", 3, ["CPSC 335"], 1),
-    Course("CPSC 471", 3, ["CPSC 351"], 1),
     Course("CPSC 254", 3, [], 3),
     Course("CPSC 349", 3, [], 3),
+    Course("CPSC 352", 3, [], 3),
     Course("CPSC 375", 3, [], 3),
+    Course("CPSC 386", 3, [], 3),
+    Course("CPSC 411", 3, [], 3),
+    Course("CPSC 431", 3, [], 3),
+    Course("CPSC 439", 3, [], 3),
+    Course("CPSC 440", 3, [], 3),
     Course("CPSC 449", 3, [], 3),
+    Course("CPSC 454", 3, [], 3),
+    Course("CPSC 455", 3, [], 3),
+    Course("CPSC 456", 3, [], 3),
     Course("CPSC 458", 3, [], 3),
-    Course("CPSC 488", 3, [], 3),
+    Course("CPSC 459", 3, [], 3),
+    Course("CPSC 462", 3, [], 3),
+    Course("CPSC 463", 3, [], 3),
+    Course("CPSC 464", 3, [], 3),
+    Course("CPSC 466", 3, [], 3),
+    Course("CPSC 474", 3, [], 3),
+    Course("CPSC 479", 3, [], 3),
+    Course("CPSC 483", 3, [], 3),
+    Course("CPSC 484", 3, [], 3),
+    Course("CPSC 485", 3, [], 3),
+    Course("CPSC 486", 3, [], 3),
+    Course("CPSC 489", 3, [], 3),
+    Course("CPSC 499", 3, [], 3),
+    Course("CPSC 495", 3, [], 3),
 ]
 
 def heuristic(state):

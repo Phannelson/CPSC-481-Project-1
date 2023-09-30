@@ -1,5 +1,3 @@
-# CPSC 481-05, Semester 1, Project 1
-
 Problem formulation
 
 Problem:
@@ -121,3 +119,6 @@ Set the “Available” flag to “True” for all courses whose all {Pre-requis
 Update {Available Courses} list taken from parent by removing “Completed=True” courses and adding “Available=True” courses, and assign the list to the current node.
 Update Total completed credits and total division-wise credits
 Calculate path cost  and heuristic of the node.
+
+
+
