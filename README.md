@@ -1,4 +1,4 @@
-# CPSC-481-Project-1
+# CPSC 481-05, Semester 1, Project 1
 
 Problem formulation
 
