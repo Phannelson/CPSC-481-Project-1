@@ -59,3 +59,4 @@ courses = {
     #or  = they can take either or prereqs
     #can be repeated = special case where the class can be repeated up to 3 times for 9 credits
 }
+

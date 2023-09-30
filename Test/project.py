@@ -15,7 +15,7 @@ class State:
         return self.completed_units < other.completed_units
 
 def is_goal_state(state):
-    return state.completed_units == 81
+    return state.completed_units == 120
 
 def actions(state, available_courses):
     max_units_per_semester = 9
@@ -23,7 +23,7 @@ def actions(state, available_courses):
 
     for course in available_courses:
         if (
-            state.completed_units + course.units <= 81
+            state.completed_units + course.units <= 120
             and all(prereq in state.courses_taken for prereq in course.prereq)
         ):
             actions.append(course)
@@ -71,7 +71,7 @@ available_courses = [
 ]
 
 def heuristic(state):
-    return 81 - state.completed_units
+    return 120 - state.completed_units
 
 def astar_search(initial_state, available_courses):
     open_list = [] 
@@ -106,3 +106,4 @@ else:
     print("Solution found:")
     for semester, course in enumerate(solution.courses_taken, start=1):
         print(f"Semester {semester}: Take {course}")
+
