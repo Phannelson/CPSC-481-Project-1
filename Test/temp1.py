@@ -36,8 +36,7 @@ def actions(state, available_courses):
             and course.name not in state.courses_taken[state.semester]
         ):
             action.append(course)
-            available_courses.remove(course)
-
+            
     return action
 
 def apply_action(state, action):
