@@ -112,7 +112,7 @@ if choice == '1':
 elif choice == '2':
     #state(completed_units, {1: semesters}, amount of classes, semester)
     #add more later
-    initial_state = State(20, {1: ["CPSC 120", "MATH 170A"],2: ["CPSC 253", "MATH 150A"],3: ["CPSC 121", "MATH 150B"]}, 0, 4)
+    initial_state = State(20, {1: ["CPSC 120", "MATH 170A"],2: ["CPSC 253", "MATH 150A"],3: ["CPSC 121", "MATH 150B"], 4:[]}, 0, 4)
 elif choice == '3':
     #list classes but we'll see how that works
     #hard code with nelson's schedule
